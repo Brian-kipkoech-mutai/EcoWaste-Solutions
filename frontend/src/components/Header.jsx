@@ -9,10 +9,8 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 
-import logo from "@/assets/logos/wasteLogo.png";
 import Truck from "@/assets/logos/recycle.png";
 import MenuBar from "./menuBar";
-import { PersonIcon } from "@radix-ui/react-icons";
 import { Button } from "./ui/button";
 import { PhoneOutgoingIcon, User } from "lucide-react";
 import { NavLink } from "react-router-dom";
