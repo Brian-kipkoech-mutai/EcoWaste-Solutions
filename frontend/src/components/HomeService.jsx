@@ -1,6 +1,8 @@
 import React from "react";
 import TrashCan from "./TrashCans";
-import { Archive, Forklift, Recycle } from "lucide-react";
+import { Archive, Forklift, MousePointerIcon, Recycle } from "lucide-react";
+import { motion } from "framer-motion";
+import { trashCanData } from "@/data/trashCanData";
 
 function HomeService(props) {
   return (
@@ -20,36 +22,10 @@ function HomeService(props) {
         </svg>
       </div>
       <div className="pt-28 flex  flex-wrap mx-auto max-w-screen-lg   justify-center lg:justify-between  gap-4">
-        <TrashCan>
-          <div className="flex  items-center gap-4 flex-col">
-            <Archive color="green" size={60} />
-            <h2 className="text-2xl font-bold text-gray-800">Clean Up</h2>
-            <p className="text-sm text-gray-600 px-2 font-semibold ">
-              We're here to help you organize your trash and make it look fresh.
-            </p>
-          </div>
-        </TrashCan>
-
-        <TrashCan>
-          <div className="flex  items-center gap-4 flex-col">
-            <Recycle color="green" size={60} />
-            <h2 className="text-2xl font-bold text-gray-800">Recycling</h2>
-            <p className="text-sm text-gray-600 px-2 font-semibold">
-              We're here to help you find the right recycling bins and organize
-              your waste.
-            </p>
-          </div>
-        </TrashCan>
-        <TrashCan>
-          <div className="flex  items-center gap-4 flex-col">
-            <Forklift size={60} color="green" />
-            <h2 className="text-2xl font-bold text-gray-800">Garbage Pickup</h2>
-            <p className="text-sm text-gray-600 font-semibold px-2">
-              We're here to help you find the perfect garbage bins and schedule
-              your pickup.
-            </p>
-          </div>
-        </TrashCan>
+        {trashCanData.map(({ icon, text, title }, i) => (
+          <TrashCan key={i} {...{ text, title }}>{icon}</TrashCan>
+        ))}
+        
       </div>
     </div>
   );

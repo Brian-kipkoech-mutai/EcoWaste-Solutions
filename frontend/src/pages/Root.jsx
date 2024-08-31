@@ -8,7 +8,7 @@ import { Outlet } from 'react-router-dom';
 
 function Root(props) {
     return (
-        <div>
+        <div className='text-gray-800 overflow-hidden'>
             <Header />
             <Outlet/>
             <Footer/>
