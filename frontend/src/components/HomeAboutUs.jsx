@@ -62,6 +62,7 @@ function HomeAboutUs(props) {
           </section>
           <section className="hidden md:block  w-1/2  max-w-sm  pb-[50%] relative ">
             <img
+              loading="lazy"
               src={trashImg}
               alt=""
               srcset=""
@@ -70,6 +71,7 @@ function HomeAboutUs(props) {
 
             <div className="p-5  hidden lg:block  bg-[#EBF2E9]  absolute  w-1/2 top-20 rounded-md sm:-right-20 lg:-left-20 shadow-lg">
               <img
+                loading="lazy"
                 src={trashImg2}
                 alt=""
                 srcset=""
@@ -78,6 +80,7 @@ function HomeAboutUs(props) {
             </div>
             <div className="p-5   hidden lg:block absolute bg-[#EBF2E9]  w-1/2 bottom-5 -right-20 rounded-md  shadow-lg">
               <img
+                loading="lazy"
                 src={trashImg3}
                 alt=""
                 srcset=""

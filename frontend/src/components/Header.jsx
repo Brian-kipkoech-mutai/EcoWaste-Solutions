@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import {
   Sheet,
   SheetContent,
@@ -30,8 +29,7 @@ import {
 function Header(props) {
   const [openSide, setOpenSide] = useState(false);
   const [isMenuOpen, setMenuOpen] = useState(false);
-  const hoverVariant = { scale: 1.1 };
-  const tapVariant = { scale: 1 };
+
   const toggleMenu = () => {
     if (openSide) {
       setOpenSide(false);
@@ -46,14 +44,18 @@ function Header(props) {
     <div className=" flex  justify-between    p-2 items-center">
       <section className="flex gap-4 items-center">
         <div>
-          <img src={Truck} alt="" srcset="" className="w-10  rounded-full " />
-           
-          
+          <img
+            loading="lazy"
+            src={Truck}
+            alt=""
+            srcset=""
+            className="w-10  rounded-full "
+          />
         </div>
         <p className="font-semibold text-lg ">EcoWaste Solutions</p>
       </section>
       <section className=" hidden lg:flex gap-2 items-center">
-        <NavLink
+        <NavLink to={'/'}
           className={" hover:bg-gray-50 py-1 px-4 rounded-md font-semibold"}
         >
           home
@@ -68,25 +70,34 @@ function Header(props) {
                 <div className="px-2 py-4">
                   <ul className="text-bold text-nowrap space-y-2 font-semibold text-muted-foreground">
                     <li className="cursor-pointer hover:bg-green-50 p-2 rounded-lg">
-                      <span className=" hover:text-green-600 hover:underline underline-offset-2">
-                        Waste Collection
-                      </span>
+                      <NavLink
+                        className=" hover:text-green-600 hover:underline underline-offset-2"
+                        to={"services/PickupService"}
+                      >
+                        Garbage Pickup
+                      </NavLink>
                       <p className="text-sm">
                         Scheduled collection of household waste.
                       </p>
                     </li>
                     <li className="cursor-pointer hover:bg-gray-100 p-2 rounded-lg">
-                      <span className=" hover:text-green-600 hover:underline underline-offset-2">
+                      <NavLink
+                        to={"services/RecyclingServices"}
+                        className=" hover:text-green-600 hover:underline underline-offset-2"
+                      >
                         Recycling Services
-                      </span>
+                      </NavLink>
                       <p className="text-sm">
                         Collection and processing of recyclable materials.
                       </p>
                     </li>
                     <li className="cursor-pointer hover:bg-gray-100 p-2 rounded-lg">
-                      <span className=" hover:text-green-600 hover:underline underline-offset-2">
-                        Garbage Pickup
-                      </span>
+                      <NavLink
+                        to={"services/WasteCollection"}
+                        className=" hover:text-green-600 hover:underline underline-offset-2"
+                      >
+                        Waste Collection
+                      </NavLink>
                       <p className="text-sm">
                         Regular pickup of garbage and non-recyclable waste.
                       </p>
@@ -103,9 +114,11 @@ function Header(props) {
                 <div className="px-2 py-4">
                   <ul className="text-bold text-nowrap space-y-2 font-semibold text-muted-foreground">
                     <li className="cursor-pointer hover:bg-gray-100 p-2 rounded-lg">
-                      <span className=" hover:text-green-600 hover:underline underline-offset-2">
-                        About us
-                      </span>
+                      <NavLink to={'/about-us'}>
+                        <span className=" hover:text-green-600 hover:underline underline-offset-2">
+                          About us
+                        </span>
+                      </NavLink>
                       <p className="text-sm">
                         Learn more about our company and our mission.
                       </p>

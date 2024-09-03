@@ -20,6 +20,7 @@ function ChooseUs(props) {
           <div className="flex flex-col  items-center md:flex-row  gap-6 justify-between p-2">
             <div className="md:w-1/2">
               <img
+                loading="lazy"
                 src={img}
                 alt=""
                 srcset=""
