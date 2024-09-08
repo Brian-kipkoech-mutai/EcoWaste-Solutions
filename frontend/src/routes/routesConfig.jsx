@@ -1,8 +1,10 @@
 import ServiceContainer from "@/containers/ServiceContainer";
 import AboutUs from "@/pages/AboutUs";
 import Home from "@/pages/Home";
+import Pricing from "@/pages/Pricing";
 
 import Root from "@/pages/Root";
+import Testimonilas from "@/pages/Testimonilas";
 import { AnimatePresence } from "framer-motion";
 import React, { cloneElement } from "react";
 import { useLocation, useRoutes } from "react-router-dom";
@@ -20,9 +22,18 @@ function RoutesConfig(props) {
         {
           path: "services/:serviceName",
           element: <ServiceContainer />,
-        }, {
+        },
+        {
           path: "about-us",
-          element: <AboutUs/>,
+          element: <AboutUs />,
+        },
+        {
+          path: "testimonials",
+          element: <Testimonilas />,
+        },
+        {
+          path: "pricing-table",
+          element: <Pricing />,
         },
         {
           path: "*",

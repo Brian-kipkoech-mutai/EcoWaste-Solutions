@@ -55,7 +55,8 @@ function Header(props) {
         <p className="font-semibold text-lg ">EcoWaste Solutions</p>
       </section>
       <section className=" hidden lg:flex gap-2 items-center">
-        <NavLink to={'/'}
+        <NavLink
+          to={"/"}
           className={" hover:bg-gray-50 py-1 px-4 rounded-md font-semibold"}
         >
           home
@@ -114,7 +115,7 @@ function Header(props) {
                 <div className="px-2 py-4">
                   <ul className="text-bold text-nowrap space-y-2 font-semibold text-muted-foreground">
                     <li className="cursor-pointer hover:bg-gray-100 p-2 rounded-lg">
-                      <NavLink to={'/about-us'}>
+                      <NavLink to={"/about-us"}>
                         <span className=" hover:text-green-600 hover:underline underline-offset-2">
                           About us
                         </span>
@@ -124,17 +125,21 @@ function Header(props) {
                       </p>
                     </li>
                     <li className="cursor-pointer hover:bg-gray-100 p-2 rounded-lg">
-                      <span className=" hover:text-green-600 hover:underline underline-offset-2">
-                        Testimonials
-                      </span>
+                      <NavLink to={"/testimonials"}>
+                        <span className=" hover:text-green-600 hover:underline underline-offset-2">
+                          Testimonials
+                        </span>
+                      </NavLink>
                       <p className="text-sm">
                         See what our customers have to say about our services.
                       </p>
                     </li>
                     <li className="cursor-pointer hover:bg-gray-100 p-2 rounded-lg">
-                      <span className="t hover:text-green-600 hover:underline underline-offset-2">
-                        Pricing tables
-                      </span>
+                      <NavLink to={"/pricing-table"}>
+                        <span className="t hover:text-green-600 hover:underline underline-offset-2">
+                          Pricing tables
+                        </span>
+                      </NavLink>
                       <p className="text-sm">
                         Explore our pricing options and find the right plan for
                         you.
