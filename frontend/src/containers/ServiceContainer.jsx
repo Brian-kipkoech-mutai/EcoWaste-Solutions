@@ -8,7 +8,6 @@ import { useParams } from "react-router-dom";
 // Component to display service details based on the service name passed in the URL parameter
 function ServiceContainer() {
     const { serviceName } = useParams();
-    console.log(serviceName)
     const { header, mainContent, services, benefits, solutions, faq, images:{bgImage,serviceImages} } =
       serviceData[serviceName];
   return (

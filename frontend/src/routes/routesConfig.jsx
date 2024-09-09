@@ -1,3 +1,4 @@
+import RequestPickupContainer from "@/containers/RequestPickupContainer";
 import ServiceContainer from "@/containers/ServiceContainer";
 import AboutUs from "@/pages/AboutUs";
 import Home from "@/pages/Home";
@@ -38,7 +39,7 @@ function RoutesConfig(props) {
         },
         {
           path: "request-pickup",
-          element: <RequestPickup />,
+          element: <RequestPickupContainer/>,
         },
         {
           path: "*",
