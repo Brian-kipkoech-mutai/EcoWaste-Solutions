@@ -2,6 +2,7 @@ import ServiceContainer from "@/containers/ServiceContainer";
 import AboutUs from "@/pages/AboutUs";
 import Home from "@/pages/Home";
 import Pricing from "@/pages/Pricing";
+import RequestPickup from "@/pages/RequestPickup";
 
 import Root from "@/pages/Root";
 import Testimonilas from "@/pages/Testimonilas";
@@ -34,6 +35,10 @@ function RoutesConfig(props) {
         {
           path: "pricing-table",
           element: <Pricing />,
+        },
+        {
+          path: "request-pickup",
+          element: <RequestPickup />,
         },
         {
           path: "*",

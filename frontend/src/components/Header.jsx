@@ -154,12 +154,14 @@ function Header(props) {
       </section>
       <section className="hidden lg:block">
         {" "}
-        <Button
-          variant="outline"
-          className="flex items-center space-x-2  bg-green-600  text-white "
-        >
-          Request Pickup <PhoneOutgoingIcon className="w-4" />
-        </Button>
+        <NavLink to={"/request-pickup"}>
+          <Button
+            variant="outline"
+            className="flex items-center space-x-2  bg-green-600  text-white "
+          >
+            Request Pickup <PhoneOutgoingIcon className="w-4" />
+          </Button>
+        </NavLink>
       </section>
       <section className="lg:hidden">
         <Sheet open={openSide} onOpenChange={toggleMenu}>
