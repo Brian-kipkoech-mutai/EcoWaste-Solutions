@@ -26,7 +26,9 @@ function Categories() {
         className="flex gap-1 items-center cursor-pointer"
         onClick={toggleCategories}
       >
-        <span className="text-base  text-gray-800 hover:text-green-600 ">Services</span>
+        <span className="text-base  text-gray-800 hover:text-green-600 ">
+          Services
+        </span>
         <motion.span
           variants={{
             open: {
@@ -73,7 +75,7 @@ function Categories() {
           whileTap={tapVariant}
         >
           <NavLink
-            to={"/search"}
+            to={"/services/WasteCollection"}
             className={({ isActive }) =>
               isActive ? "text-gray-800 underline" : "text-muted-foreground"
             }
@@ -89,6 +91,7 @@ function Categories() {
           whileTap={tapVariant}
         >
           <NavLink
+            to={"services/RecyclingServices"}
             className={({ isActive }) =>
               isActive ? "text-gray-800 underline" : "text-muted-foreground"
             }
@@ -102,6 +105,7 @@ function Categories() {
           whileTap={tapVariant}
         >
           <NavLink
+            to={"services/PickupService"}
             className={({ isActive }) =>
               isActive ? "text-gray-800 underline" : "text-muted-foreground"
             }

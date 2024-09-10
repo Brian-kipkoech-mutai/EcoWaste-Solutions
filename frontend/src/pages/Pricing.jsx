@@ -1,8 +1,4 @@
 import React from "react";
-import smallTrash from "../assets/logos/small trash.jfif";
-import mediumTrash from "../assets/logos/mediumTrash.jfif";
-import largeTrash from "../assets/logos/largeTrash.jfif";
-import { Button } from "@/components/ui/button";
 import { priceCardData } from "@/data/priceCansData";
 import PriceCard from "@/components/PriceCard";
 
@@ -20,15 +16,18 @@ function Pricing(props) {
         </div>
         <div className="flex flex-wrap  mx-auto max-w-screen-lg w-full gap-2 justify-center lg:justify-between gap-y-4 py-4 pb-14">
           {priceCardData.map(
-            ({
-              size,
-              pricePerMonth,
-              capacityGallons,
-              maxPeopleServed,
-              maxTrashBags,
-              maxWeightLbs,
-              img,
-            }) => (
+            (
+              {
+                size,
+                pricePerMonth,
+                capacityGallons,
+                maxPeopleServed,
+                maxTrashBags,
+                maxWeightLbs,
+                img,
+              },
+              i
+            ) => (
               <PriceCard
                 {...{
                   size,
@@ -39,6 +38,7 @@ function Pricing(props) {
                   maxWeightLbs,
                   img,
                 }}
+                key={i}
               />
             )
           )}

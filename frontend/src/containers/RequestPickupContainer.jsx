@@ -1,20 +1,15 @@
+import { formContext } from "@/context/pickupFormContext";
 import RequestPickup from "@/pages/RequestPickup";
-import React, { useState } from "react";
+import React, { useContext } from "react";
 
 function RequestPickupContainer(props) {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    location: "",
-    priceTire: "$20.5",
-    description: "",
-  });
+   const { formData, setFormData } = useContext(formContext);
 
   const handleChange = ({ target }) => {
     setFormData({ ...formData, [target.name]: target.value });
   };
-  const handleSelectChange = ({ target: value }) => {
+  const handleSelectChange = (value) => {
+   
     setFormData({ ...formData, location: value });
   };
   const handleSubmit = (e) => {

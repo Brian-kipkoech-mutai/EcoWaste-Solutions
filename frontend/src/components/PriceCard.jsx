@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Button } from "./ui/button";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
+import { formContext } from "@/context/pickupFormContext";
 
 function PriceCard({
   size,
@@ -11,23 +13,29 @@ function PriceCard({
   maxWeightLbs,
   img,
 }) {
-    const viewVariances = {
-      hidden: { opacity: 0, x: 100, scale: 0.8 },
-      inView: {
-        opacity: 1,
-        y: 0,
-        x: 0,
-        scale: 1,
-        transition: {
-          duration: 0.7,
-          type: "spring",
-          stiffness: 120,
-          damping: 15,
-          mass: 0.3,
-        },
+  const viewVariances = {
+    hidden: { opacity: 0, x: 100, scale: 0.8 },
+    inView: {
+      opacity: 1,
+      y: 0,
+      x: 0,
+      scale: 1,
+      transition: {
+        duration: 0.7,
+        type: "spring",
+        stiffness: 120,
+        damping: 15,
+        mass: 0.3,
       },
-    };
-
+    },
+  };
+  const navigate = useNavigate();
+  const { setFormData, formData } = useContext(formContext);
+  
+  const handlePriceSelect = (priceTire) => {
+    setFormData({ ...formData, priceTire });
+    navigate("/request-pickup");
+  };
   return (
     <motion.div
       variants={viewVariances}
@@ -58,7 +66,12 @@ function PriceCard({
           <p className=" text-center  text-sm ">perMonth</p>
         </section>
         <section className="flex items-center justify-center  ">
-          <Button className="w-3/4  mb-4">Select Plan</Button>
+          <Button
+            className="w-3/4  mb-4"
+            onClick={() => handlePriceSelect(pricePerMonth)}
+          >
+            Select Plan
+          </Button>
         </section>
       </div>
     </motion.div>

@@ -1,5 +1,5 @@
 import smallTrash from "../assets/logos/small trash.jfif";
-import mediumTrash from "../assets/logos/mediumTrash.jfif";
+import mediumTrash from "../assets/logos/f446tb63.png";
 import largeTrash from "../assets/logos/largeTrash.jfif";
 
 export const priceCardData = [

@@ -75,7 +75,7 @@
            whileTap={tapVariant}
          >
            <NavLink
-             to={"/search"}
+             to={"/about-us"}
              className={({ isActive }) =>
                isActive ? "text-gray-800 underline" : "text-muted-foreground"
              }
@@ -91,6 +91,7 @@
            whileTap={tapVariant}
          >
            <NavLink
+             to={"/testimonials"}
              className={({ isActive }) =>
                isActive ? "text-gray-800  underline" : "text-muted-foreground "
              }
@@ -104,6 +105,7 @@
            whileTap={tapVariant}
          >
            <NavLink
+             to={"/pricing-table"}
              className={({ isActive }) =>
                isActive ? "text-gray-800 underline" : "text-muted-foreground"
              }

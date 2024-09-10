@@ -12,8 +12,14 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { NavLink } from "react-router-dom";
+import classNames from "classnames";
 
-function RequestPickup({handleSubmit,handleChange,handleSelectChange ,formData}) {
+function RequestPickup({
+  handleSubmit,
+  handleChange,
+  handleSelectChange,
+  formData,
+}) {
   return (
     <div>
       <form onSubmit={handleSubmit} className="p-2 flex flex-col gap-6">
@@ -78,9 +84,14 @@ function RequestPickup({handleSubmit,handleChange,handleSelectChange ,formData})
                 Select Price
               </Button>
             </NavLink>
-            <div className="py-6 flex gap-2 items-center">
+            
+            <div
+              className={classNames("py-6 flex gap-2 items-center", {
+                hidden: !formData.priceTire,
+              })}
+            >
               <h2 className="font-semibold">Selected Tire:</h2>
-              <p className="text-green-600 text-2xl">{formData.priceTire}</p>
+              <p className="text-green-600 text-2xl">$ {formData.priceTire}</p>
             </div>
           </div>
         </fieldset>

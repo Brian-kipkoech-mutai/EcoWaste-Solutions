@@ -179,18 +179,20 @@ function Header(props) {
                     </div>
                     <div>
                       <div>
-                        <Button
-                          variant="outline"
-                          className="flex items-center space-x-2  bg-green-600  text-white "
-                        >
-                          Request Pickup <PhoneOutgoingIcon className="w-4" />
-                        </Button>
+                        <NavLink to={"/request-pickup"}>
+                          <Button
+                            variant="outline"
+                            className="flex items-center space-x-2  bg-green-600  text-white "
+                          >
+                            Request Pickup <PhoneOutgoingIcon className="w-4" />
+                          </Button>
+                        </NavLink>
                       </div>
                     </div>
                   </div>
                   <hr className="space-y-2 block " />
                   <div className="  space-y-3  mt-2 font-semibold text-base  text-gray-800">
-                    <NavLink to={"/home"} className={"hover:text-green-600"}>
+                    <NavLink to={"/"} className={"hover:text-green-600"}>
                       Home
                     </NavLink>
                     <Categories />

@@ -1,12 +1,14 @@
 import React from "react";
-import Header from "./components/Header";
 import { BrowserRouter } from "react-router-dom";
 import RoutesConfig from "./routes/routesConfig";
+import FormContextProvider from "./context/pickupFormContext";
 
 function App(props) {
   return (
     <BrowserRouter>
-      <RoutesConfig />
+      <FormContextProvider>
+        <RoutesConfig />
+      </FormContextProvider>
     </BrowserRouter>
   );
 }
