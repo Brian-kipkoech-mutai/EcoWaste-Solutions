@@ -1,11 +1,14 @@
+import RegisterContainer from "@/containers/RegisterContainer";
 import RequestPickupContainer from "@/containers/RequestPickupContainer";
 import ServiceContainer from "@/containers/ServiceContainer";
 import AboutUs from "@/pages/AboutUs";
 import Home from "@/pages/Home";
+import Login from "@/pages/login";
 import Pricing from "@/pages/Pricing";
 import RequestPickup from "@/pages/RequestPickup";
 
 import Root from "@/pages/Root";
+import SignUp from "@/pages/signup";
 import Testimonilas from "@/pages/Testimonilas";
 import { AnimatePresence } from "framer-motion";
 import React, { cloneElement } from "react";
@@ -42,6 +45,14 @@ function RoutesConfig(props) {
           element: <RequestPickupContainer/>,
         },
         {
+          path: '/login',
+          element: <Login/>
+        },
+        {
+          path: '/signup',
+          element:<RegisterContainer/>
+        },
+        {
           path: "*",
           element: <h1>Page not found</h1>, // This will be shown when no matching route is found.
         },
@@ -50,7 +61,7 @@ function RoutesConfig(props) {
   ]);
 
   return (
-    <AnimatePresence mode="wait " initial={false}>
+    <AnimatePresence mode="wait" initial={false}>
       {cloneElement(routes, { key: useLocation().pathname })}
     </AnimatePresence>
   );

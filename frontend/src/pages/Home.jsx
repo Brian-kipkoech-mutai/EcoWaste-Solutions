@@ -6,17 +6,19 @@ import Statistics from "@/components/statistics";
 import ChooseUs from "@/components/chooseUs";
 import Testimonials from "@/components/Testimonials";
 import EmailSection from "@/components/EmailSection";
+import Trasition from "@/components/Trasition";
 
 function Home(props) {
   return (
     <div className="">
-          <Hero />
-          <HomeService />
-          <HomeAboutUs />
-          <Statistics />
-          <ChooseUs />
-          <Testimonials />
-          <EmailSection/>
+      <Hero />
+      <HomeService />
+      <HomeAboutUs />
+      <Statistics />
+      <ChooseUs />
+      <Testimonials />
+      <EmailSection />
+      <Trasition />
     </div>
   );
 }

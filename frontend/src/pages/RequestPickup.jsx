@@ -14,6 +14,7 @@ import {
 import { NavLink } from "react-router-dom";
 import classNames from "classnames";
 import { motion } from "framer-motion";
+import Trasition from "@/components/Trasition";
 
 function RequestPickup({
   handleSubmit,
@@ -280,6 +281,7 @@ function RequestPickup({
           />
         </svg>
       </motion.div>
+      <Trasition/>
     </div>
   );
 }
