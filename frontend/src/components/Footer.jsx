@@ -69,14 +69,14 @@ function Footer(props) {
             className="flex gap-2 items-center hover:text-green-500 "
           >
             {" "}
-            <LucideMapPinHouse className="text-green-500" /> add:Kabuku Vintage
+            <LucideMapPinHouse className="text-green-500" /> add:London
           </Link>
           <Link
             to={"mailto:"}
             className="flex gap-2 items-center  hover:text-green-500"
           >
             {" "}
-            <Mail className="text-green-500 " /> <p>Eliudnjoroge@gmail.com</p>
+            <Mail className="text-green-500 " /> <p>kbrianmutai@gmail.com</p>
           </Link>
           <Link
             to={"tel:+254722152936"}
@@ -84,7 +84,7 @@ function Footer(props) {
           >
             {" "}
             <Phone className="text-green-500 " />
-            <p>+254722152936</p>
+            <p>+254769694566</p>
           </Link>
           <section className="flex gap-4 items-center">
             <Link>
@@ -108,7 +108,7 @@ function Footer(props) {
 
         <p className="text-center w-full">
           © 2024{" "}
-          <span className="text-green-500 font-semibold italic">@Eliud</span>{" "}
+          <span className="text-green-500 font-semibold italic">@Brian</span>{" "}
           All Rights Reserved
         </p>
       </div>

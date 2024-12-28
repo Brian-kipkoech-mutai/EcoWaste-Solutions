@@ -33,9 +33,9 @@ export const teamMembers = [
     initials: "GS",
   },
   {
-    name: "Eliud Njoroge",
+    name: "Denzel khabib",
     title: "Lead Developer",
-    bio: "Eliud develops and maintains our digital platforms, enhancing user experience.",
+    bio: "Denzel develops and maintains our digital platforms, enhancing user experience.",
     img: eliud,
     initials: "EN",
   },
